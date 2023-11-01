@@ -35,13 +35,13 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => hideKeyboard(context),
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Fingerprint Capture'),
-        ),
-        body: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Fingerprint Capture'),
+      ),
+      body: GestureDetector(
+        onTap: () => hideKeyboard(context),
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 30,
