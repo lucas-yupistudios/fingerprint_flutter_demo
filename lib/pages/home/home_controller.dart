@@ -19,11 +19,17 @@ class HomeController extends ChangeNotifier {
     if (form!.validate()) {
       final controller = FingerprintController(
         config: config,
+        onFingerCapture: (images, error) {
+          if (error != null) {
+            print('Fingerprint: $error');
+          } else {
+            print('Fingerprint: ${images[0]}');
+          }
+          fingers = images;
+          notifyListeners();
+        },
       );
-      final images = await controller.takeFingerprint();
-      print('Fingerprint: ${images[0]}');
-      fingers = images;
-      notifyListeners();
+      await controller.takeFingerprint();
     }
   }
 
