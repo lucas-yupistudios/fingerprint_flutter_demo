@@ -29,10 +29,10 @@ packages:
     dependency: "direct main"
     description:
       name: biopassid_fingerprint_sdk
-      sha256: "5694a2333dff8635c42442e7a920485a1647f5405e1192c8e8c4400fff39f103"
+      sha256: "06092dad40b7aa50f2c510e7d1a801bb1ff932ccdb66d489af9658f71a1ec7e9"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.2"
+    version: "1.0.0"
   boolean_selector:
     dependency: transitive
     description:

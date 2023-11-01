@@ -18,15 +18,6 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     controller = HomeController();
-    controller.config.backButton.labelOptions.content = 'Back';
-    controller.config.helpText.messages.leftHandMessage =
-        'Place your left hand (without the thumb) until the marker is centered.';
-    controller.config.helpText.messages.rightHandMessage =
-        'Place your right hand (without the thumb) until the marker is centered.';
-    controller.config.helpText.messages.leftHandMessage =
-        'Place your thumbs until the marker is centered.';
-    controller.config.tooCloseText.content = 'Too close';
-    controller.config.tooFarText.content = 'Too far';
     controller.addListener(() => mounted ? setState(() {}) : null);
   }
 
