@@ -27,10 +27,17 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 
+  void hideKeyboard(BuildContext context) {
+    final currentFocus = FocusScope.of(context);
+    if (!currentFocus.hasPrimaryFocus) {
+      currentFocus.unfocus();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => KeyBoardUtil.hideKeyboard(context),
+      onTap: () => hideKeyboard(context),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Fingerprint Capture'),
